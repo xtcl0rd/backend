@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Log</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Use your existing CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Blog / Audit Log</h1>
+        <div id="log-container"></div>
+    </div>
+
+    <script>
+        // Fetch the logs from your PHP file
+        fetch('https://yourwebsite.com/auditlog.txt')
+            .then(response => response.text())
+            .then(data => {
+                const logContainer = document.getElementById('log-container');
+                const logs = data.split('\n').filter(log => log.trim() !== "");
+                logs.forEach(log => {
+                    const logEntry = document.createElement('p');
+                    logEntry.textContent = log;
+                    logContainer.appendChild(logEntry);
+                });
+            });
+    </script>
+</body>
+</html>
