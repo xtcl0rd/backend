@@ -25,4 +25,4 @@ async def autolog(ctx: nextcord.Interaction, message: str):
         await ctx.response.send_message(f"Error: {e}")
 
 # Start the bot
-bot.run("MTI5Nzk2OTI5NTA4NjU4Mzk3MA.GLbcAq.CPi9NunqcevJoXNaKBCmuDg2W3bBn_AiTVFV6w")
+bot.run("MTI5Nzk2OTI5NTA4NjU4Mzk3MA.GAJvb1.BJ4ZVfuMgfRzpUhqrN3TLR9UBxG0UQBkGGWCRI")
